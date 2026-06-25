@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lato:wght@400;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Playfair Display", Georgia, serif;
+  --font-sans: "Lato", sans-serif;
+  --font-accent: "Libre Baskerville", serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  --color-primary: #6B1A1A;
+  --color-primary-light: #7B2D2D;
+  --color-accent: #C9922B;
+  --color-accent-light: #D4A017;
+  --color-bg-cream: #FAF6EE;
+  --color-bg-warm-beige: #EDE4D0;
+  --color-bg-light: #F5F0E8;
+  --color-text-dark: #2C1810;
+  --color-text-med: #5C3D2E;
+  --color-footer-bg: #2C0A0A;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg-cream);
+  color: var(--color-text-dark);
+}
+
+/* Custom CSS lines and stamps */
+.section-heading::before,
+.section-heading::after {
+  content: "";
+  display: inline-block;
+  width: 60px;
+  height: 1px;
+  background-color: #C9922B;
+  margin: 0 16px;
+  vertical-align: middle;
+}
+
+/* Stamp border using repeating-radial-gradient */
+.stamp-border {
+  padding: 10px;
+  background: white;
+  background-clip: padding-box;
+  border: 10px solid transparent;
+  position: relative;
+}
+
+.stamp-border::after {
+  content: "";
+  position: absolute;
+  top: -10px; bottom: -10px; left: -10px; right: -10px;
+  z-index: -1;
+  background-image: radial-gradient(circle, #FAF6EE 4px, transparent 5px);
+  background-size: 14px 14px;
+}
+
+/* Train track pattern */
+.train-track-bg {
+  background-color: #4A1010;
+  background-image: repeating-linear-gradient(
+    45deg,
+    transparent,
+    transparent 10px,
+    rgba(201, 146, 43, 0.1) 10px,
+    rgba(201, 146, 43, 0.1) 11px,
+    transparent 11px,
+    transparent 20px,
+    rgba(201, 146, 43, 0.1) 20px,
+    rgba(201, 146, 43, 0.1) 22px
+  );
+}
+
+/* Subtle grain pattern */
+.grain-overlay {
+  position: relative;
+}
+
+.grain-overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.04;
+  pointer-events: none;
+  z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+}
+

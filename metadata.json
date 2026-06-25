@@ -1,0 +1,6 @@
+{
+  "name": "Tapri Junction",
+  "description": "Indian restaurant in Bangkok, Thailand inspired by Indian railway chai stalls and train station culture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
