@@ -1,33 +1,32 @@
-import React from 'react';
-import { Coffee, Heart, Train, Leaf, Users } from 'lucide-react';
+import React from "react";
 
 export default function Values() {
   const values = [
     {
-      icon: <Coffee className="w-8 h-8 text-[#C9922B] stroke-[1.5]" />,
+      image: "/assets/cup-removebg-preview.png",
       title: "AUTHENTIC INDIAN FLAVOURS",
-      desc: "Made with real ingredients and time-honoured recipes"
+      desc: "Made with real ingredients and time-honoured recipes",
     },
     {
-      icon: <Heart className="w-8 h-8 text-[#C9922B] stroke-[1.5]" />,
+      image: "/assets/heart-removebg-preview.png",
       title: "MADE WITH LOVE, SERVED WITH WARMTH",
-      desc: "Every dish is prepared to make you feel at home"
+      desc: "Every dish is prepared to make you feel at home",
     },
     {
-      icon: <Train className="w-8 h-8 text-[#C9922B] stroke-[1.5]" />,
+      image: "/assets/train-removebg-preview.png",
       title: "INSPIRED BY INDIAN RAILWAYS",
-      desc: "From the platform culture to the food we grew up with"
+      desc: "From the platform culture to the food we grew up with",
     },
     {
-      icon: <Leaf className="w-8 h-8 text-[#C9922B] stroke-[1.5]" />,
+      image: "/assets/leaf-removebg-preview.png",
       title: "VEGETARIAN GOODNESS",
-      desc: "Wholesome, sattvic and full of flavour"
+      desc: "Wholesome, sattvic and full of flavour",
     },
     {
-      icon: <Users className="w-8 h-8 text-[#C9922B] stroke-[1.5]" />,
+      image: "/assets/person-removebg-preview.png",
       title: "A PLACE FOR EVERYONE",
-      desc: "Come as a guest, leave as family"
-    }
+      desc: "Come as a guest, leave as family",
+    },
   ];
 
   return (
@@ -41,11 +40,15 @@ export default function Values() {
           {values.map((item, index) => (
             <div
               key={index}
-              className={`flex flex-col items-center text-center px-4 ${index > 0 ? 'pt-6 sm:pt-0' : ''} lg:first:pl-0 lg:last:pr-0`}
+              className={`flex flex-col items-center text-center px-4 ${index > 0 ? "pt-6 sm:pt-0" : ""} lg:first:pl-0 lg:last:pr-0`}
             >
               {/* Icon Container with subtle ring */}
               <div className="bg-[#FAF6EE]/5 p-3 rounded-full mb-4 border border-[#C9922B]/20 flex items-center justify-center hover:bg-[#C9922B]/10 hover:border-[#C9922B]/40 transition-all duration-300">
-                {item.icon}
+                <img
+                  src={item.image}
+                  alt={item.title}
+                  className="w-20 h-20 object-contain"
+                />
               </div>
 
               {/* Heading */}
