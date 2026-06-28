@@ -24,12 +24,12 @@ export default function Newsletter() {
           <div className="grid lg:grid-cols-12 gap-8 items-center relative z-10">
             {/* Left Column: Heading & Vintage Steam Train SVG Icon */}
             <div className="lg:col-span-6 space-y-4 text-left relative pl-0 md:pl-28">
-              {/* Train Image absolute positioned on the left side */}
-              <div className="absolute -left-60 top-1/2 -translate-y-1/2 opacity-50 hidden md:block w-90 h-90">
+              {/* Train Image - visible on mobile, absolutely positioned on desktop */}
+              <div className="block md:absolute md:-left-60 md:top-1/2 md:-translate-y-1/2 opacity-50 md:opacity-50 w-full md:w-90 md:h-90 mb-2 md:mb-0">
                 <img
                   src="/assets/train_logofree-removebg-preview.png"
                   alt="Train Logo"
-                  className="w-full h-full object-contain"
+                  className="w-90 h-90 md:w-full md:h-full object-contain mx-auto md:mx-0"
                 />
               </div>
 
